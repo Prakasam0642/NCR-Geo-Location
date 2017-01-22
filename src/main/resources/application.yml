@@ -1,0 +1,3 @@
+location:
+  url: http://maps.googleapis.com/maps/api/geocode/json?latlng=
+---
