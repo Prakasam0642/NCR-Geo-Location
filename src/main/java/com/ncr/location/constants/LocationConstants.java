@@ -2,7 +2,7 @@ package com.ncr.location.constants;
 
 public class LocationConstants {
 	
-public static final String ISO_DATE_FORMAT = "yyyy-MM-dd'T'HH:mmZ";
+public static final String ISO_DATE_FORMAT = "yyyy-MM-dd'T'HH:mmZ"; 
 public static final String COMMA_SYMBOL = ",";
 public static final String LOCATION_URL = "location.url";
 public static final String CACHE_NAME = "LOCATION_CACHE"; 
