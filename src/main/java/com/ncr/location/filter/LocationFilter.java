@@ -33,14 +33,14 @@ public class LocationFilter extends GenericFilterBean{
 			if(httpRequest.getRequestURI().contains("/location/angle")){
 				String[] requestUrls = httpRequest.getRequestURI().split("/");
 				
-				if(!ValidationUtil.isValidLatitude(requestUrls[4])) {
+				if(!ValidationUtil.isValidLatitudeAndLongitude(requestUrls[4], requestUrls[5])) {
 					sendErrorResponse(HttpStatus.BAD_REQUEST.toString(), HttpStatus.BAD_REQUEST.name(), LocationConstants.BAD_REQUEST, response);
 					return;			
 				}
-				if(!ValidationUtil.isValidLongitude(requestUrls[5])) {
+				/*if(!ValidationUtil.isValidLongitude(requestUrls[5])) {
 					sendErrorResponse(HttpStatus.BAD_REQUEST.toString(), HttpStatus.BAD_REQUEST.name(), LocationConstants.BAD_REQUEST, response);
 					return;				
-				}
+				}*/
 			}
 		}catch(NullPointerException nullEx) {
 			sendErrorResponse(HttpStatus.BAD_REQUEST.toString(), HttpStatus.BAD_REQUEST.name(), LocationConstants.BAD_REQUEST, response);

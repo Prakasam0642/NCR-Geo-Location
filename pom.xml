@@ -38,10 +38,16 @@
           <scope>compile</scope>
         </dependency>
 		<dependency>
-			<groupId>coherence</groupId>
+<!-- 		<groupId>coherence</groupId>
+			<artifactId>coherence</artifactId>
+			<version>3.6.0</version> -->
+			<groupId>com.tangosol</groupId>
 			<artifactId>coherence</artifactId>
 			<version>3.6.0</version>
-			<!-- <scope>provided</scope> -->
+			<!-- <scope>system</scope>
+			<systemPath>${project.basedir}/coherence-jar/coherence-3.6.0.jar</systemPath>  			
+			<version>3.6.0</version>
+			<scope>provided</scope> -->
 		</dependency>        		
         <dependency>
 			<groupId>org.testng</groupId>
@@ -50,6 +56,14 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+	
+	<repositories>
+		<repository>
+			<id>coherence-jar</id>
+			<url>file://${project.parent.basedir}/coherence-jar</url>
+		</repository>
+	</repositories>
+	
 <build>
     <plugins>
         <plugin>
